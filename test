@@ -9,3 +9,34 @@
 3000 epochs
 [('departments', 0.68005294), ('greeting', 0.17340669), ('name', 0.091332085),
  ('thanks', 0.033682592), ('hours', 0.019018946), ('goodbye', 0.002506807)]
+
+4000 epochs
+ [('departments', 0.8792715), ('greeting', 0.103484884), ('name', 0.01069557), ('hours', 0.006184321),
+('location', 0.00034832684), ('goodbye', 8.650392e-06), ('thanks', 6.703484e-06)]
+
+[('name', 0.6978045), ('departments', 0.25792798), ('thanks', 0.031793848), ('location', 0.007467037),
+ ('greeting', 0.003947605), ('hours', 0.0010139056), ('goodbye', 4.5165147e-05)]
+
+[('departments', 0.5550731), ('name', 0.40262285), ('greeting', 0.038402658), 
+('hours', 0.0024450424), ('location', 0.00091761776), ('thanks', 0.00053352275), 
+('goodbye', 5.232279e-06)]
+
+5000 epochs
+[('departments', 0.3183377), ('hours', 0.20028643), ('name', 0.17496495), ('thanks', 0.13147591),
+ ('greeting', 0.08859094), ('goodbye', 0.071049035), ('location', 0.015294971)]
+
+6000 epochs
+[('departments', 0.3555076), ('name', 0.25754824), ('hours', 0.16343352), ('goodbye', 0.100294605),
+ ('thanks', 0.053778995), ('greeting', 0.046379495), ('location', 0.02305756)]
+
+7000 epochs
+[('departments', 0.29583073), ('thanks', 0.2658434), ('hours', 0.16621764), ('name', 0.14393471),
+ ('greeting', 0.08250596), ('goodbye', 0.022956843), ('location', 0.022710688)]
+
+7000 epochs
+[('name', 0.6865881), ('departments', 0.31132153), ('goodbye', 0.00096353504), ('greeting', 0.00092376117),
+ ('hours', 0.00019967945), ('location', 2.9508965e-06), ('thanks', 3.7164003e-07)] 
+
+7000 epochs
+[('departments', 0.5140432), ('greeting', 0.35091963), ('hours', 0.109386474), ('name', 0.015490403),
+ ('thanks', 0.007379096), ('location', 0.0019747475), ('goodbye', 0.00080642797)]

@@ -82,7 +82,7 @@ with open('SCTdataset.json') as json_data:
     # Define model and setup tensorboard
     model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
     # Start training (apply gradient descent algorithm)
-    model.fit(train_x, train_y, n_epoch=3000, batch_size=8, show_metric=True)
+    model.fit(train_x, train_y, n_epoch=4000, batch_size=8, show_metric=True)
     model.save('model.tflearn')
     # save all of our data structures
     import pickle

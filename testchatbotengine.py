@@ -54,6 +54,7 @@ def bow(sentence, words, show_details=False):
     return(np.array(bag))
 
 #response generator
+context={}
 ERROR_THRESHOLD = 0.25
 def classify(sentence):
     # generate probabilities from the model
@@ -80,9 +81,17 @@ def response(sentence, userID='123', show_details=False):
             for i in intents['intents']:
                 # find a tag matching the first result
                 if i['tag'] == results[0][0]:
-                    # a random response from the intent
-                    return print(random.choice(i['responses']))
+                    if 'context_set' in i:
+                        if show_details: print ('context:', i['context_set'])
+                        context[userID] = i['context_set']
+                    # check if this intent is contextual and applies to this user's conversation
+                    if not 'context_filter' in i or \
+                        (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
+                        if show_details: print ('tag:', i['tag'])
+                        # a random response from the intent
+                        return print(random.choice(i['responses']))
+
             results.pop(0)
 
-
-response("What departments are there?",show_details=True)
+response("where is the canteen",show_details=True)
+response("im at the ccf right now",show_details=True)
