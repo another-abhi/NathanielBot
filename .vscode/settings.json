@@ -1,0 +1,6 @@
+{
+    "python.unitTest.pyTestArgs": [
+        "DNN chatbot"
+    ],
+    "python.unitTest.pyTestEnabled": true
+}

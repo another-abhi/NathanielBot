@@ -15,7 +15,7 @@ import tensorflow as tf
 import tflearn
 net = tflearn.input_data(shape=[None, len(train_x[0])])
 net = tflearn.fully_connected(net, 8)
-net = tflearn.fully_connected(net, 8)
+#net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 # Define model and setup tensorboard
@@ -89,9 +89,8 @@ def response(sentence, userID='123', show_details=False):
                         (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                         if show_details: print ('tag:', i['tag'])
                         # a random response from the intent
-                        return print(random.choice(i['responses']))
-
+                        s=(random.choice(i['responses']))
+                        print (s)
+                        return s
             results.pop(0)
-
-response("where is the canteen",show_details=True)
-response("im at the ccf right now",show_details=True)
+response("ehat is your name")
