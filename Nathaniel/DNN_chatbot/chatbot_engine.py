@@ -1,5 +1,5 @@
 #--------------------------NATHANIEL ENGINE--------------------------------
-import chatbot_config as cfg
+import Nathaniel.chatbot_config as cfg
 import pickle
 # unpacking the training data
 data = pickle.load( open( "training_data", "rb" ) )

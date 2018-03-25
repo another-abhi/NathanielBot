@@ -1,0 +1,8 @@
+*.DESKTOP-Q84TCT6
+training_data
+model.tflearn.meta
+model.tflearn.index
+model.tflearn.data-00000-of-00001
+checkpoint
+__pycache__
+.pytest_cache
