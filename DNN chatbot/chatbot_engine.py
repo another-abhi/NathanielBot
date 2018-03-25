@@ -1,3 +1,4 @@
+#--------------------------NATHANIEL ENGINE--------------------------------
 import chatbot_config as cfg
 import pickle
 # unpacking the training data
@@ -6,10 +7,9 @@ words = data['words']
 classes = data['classes']
 train_x = data['train_x']
 train_y = data['train_y']
-
 # unpacking the dataset
 import json
-with open(cfg.dataset) as json_data:#note filename
+with open(cfg.dataset) as json_data:
     intents = json.load(json_data)
 
 import tensorflow as tf

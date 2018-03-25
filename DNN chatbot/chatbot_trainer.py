@@ -84,6 +84,7 @@ with open(cfg.dataset) as json_data:
     # Start training (apply gradient descent algorithm)
     model.fit(train_x, train_y, n_epoch=cfg.epochs, batch_size=cfg.batch_size, show_metric=False)
     model.save('model.tflearn')
+    
     # save all of our data structures
     import pickle
     pickle.dump( {'words':words, 'classes':classes, 'train_x':train_x, 'train_y':train_y}, open( "training_data", "wb" ) )
