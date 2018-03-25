@@ -1,3 +1,4 @@
+import chatbot_config as cfg
 import pickle
 # unpacking the training data
 data = pickle.load( open( "training_data", "rb" ) )
@@ -8,7 +9,7 @@ train_y = data['train_y']
 
 # unpacking the dataset
 import json
-with open('SCTdataset.json') as json_data:#note filename
+with open(cfg.dataset) as json_data:#note filename
     intents = json.load(json_data)
 
 import tensorflow as tf
@@ -93,4 +94,3 @@ def response(sentence, userID='123', show_details=False):
                         print (s)
                         return s
             results.pop(0)
-response("ehat is your name")

@@ -1,4 +1,4 @@
-from testchatbotengine import response
+from chatbot_engine import response
 def test_name():
     a=response("Tell me your name")
     assert a=="Hello, my name is Nathaniel."or a=="I'm Nathaniel" or a=="You can call me Nathaniel"

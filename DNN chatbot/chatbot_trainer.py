@@ -1,6 +1,8 @@
-
+#--------------------Training module for Nathaniel Chatbot-----------------
+import chatbot_config as cfg
 # things we need for NLP
 import nltk
+#alternate stemmer should test 
 #from nltk.stem.lancaster import LancasterStemmer
 #stemmer = LancasterStemmer()
 from nltk.stem import SnowballStemmer
@@ -10,11 +12,9 @@ import numpy as np
 import tflearn
 import tensorflow as tf
 import random
-# import our chat-bot intents file
 
 import json
-
-with open('SCTdataset.json') as json_data:
+with open(cfg.dataset) as json_data:
     print("here")
     intents = json.load(json_data)
     words = []
@@ -68,8 +68,8 @@ with open('SCTdataset.json') as json_data:
     random.shuffle(training)
     training = np.array(training)
     # create train and test lists
-    train_x = list(training[:,0])
-    train_y = list(training[:,1])
+    train_x = list(training[:,0])#training set
+    train_y = list(training[:,1])#test set
 
     # reset underlying graph data
     tf.reset_default_graph()
@@ -82,7 +82,7 @@ with open('SCTdataset.json') as json_data:
     # Define model and setup tensorboard
     model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
     # Start training (apply gradient descent algorithm)
-    model.fit(train_x, train_y, n_epoch=4000, batch_size=8, show_metric=True)
+    model.fit(train_x, train_y, n_epoch=cfg.epochs, batch_size=cfg.batch_size, show_metric=False)
     model.save('model.tflearn')
     # save all of our data structures
     import pickle
