@@ -1,5 +1,7 @@
 #--------------------Training module for Nathaniel Chatbot-----------------
-import Nathaniel.chatbot_config as cfg
+import sys
+sys.path.append('../')
+import chatbot_config as cfg
 # things we need for NLP
 import nltk
 #alternate stemmer should test 

@@ -1,15 +1,17 @@
 #--------------------------NATHANIEL ENGINE--------------------------------
-import Nathaniel.chatbot_config as cfg
+import sys
+sys.path.append('../')
+import chatbot_config as cfg
 import pickle
 # unpacking the training data
-data = pickle.load( open( "training_data", "rb" ) )
+data = pickle.load( open( "../DNN_chatbot/training_data", "rb" ) )
 words = data['words']
 classes = data['classes']
 train_x = data['train_x']
 train_y = data['train_y']
 # unpacking the dataset
 import json
-with open(cfg.dataset) as json_data:
+with open("../DNN_chatbot/"+cfg.dataset) as json_data:
     intents = json.load(json_data)
 
 import tensorflow as tf
@@ -21,7 +23,7 @@ net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 # Define model and setup tensorboard
 model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')    
-model.load('./model.tflearn')
+model.load('../DNN_chatbot/model.tflearn')
 
 import nltk
 #from nltk.stem.lancaster import LancasterStemmer
