@@ -64,7 +64,7 @@ def classify(sentence):
     results = model.predict([bow(sentence, words, True)])[0]
     print (results)
     # filter out predictions below a threshold
-    results = [[i,r] for i,r in enumerate(results)]# if r>ERROR_THRESHOLD and r<.5]
+    results = [[i,r] for i,r in enumerate(results) if r>ERROR_THRESHOLD]
     # sort by strength of probability
     print (results)
     results.sort(key=lambda x: x[1], reverse=True)
@@ -88,11 +88,18 @@ def response(sentence, userID='123', show_details=False):
                         if show_details: print ('context:', i['context_set'])
                         context[userID] = i['context_set']
                     # check if this intent is contextual and applies to this user's conversation
-                    if not 'context_filter' in i or \
-                        (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
+                    if not 'context_filter' in i or (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                         if show_details: print ('tag:', i['tag'])
                         # a random response from the intent
                         s=(random.choice(i['responses']))
+                        if (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
+                            context[userID] = ""
                         print (s)
                         return s
             results.pop(0)
+        return "Sorry, I am unable to reply to that question at the moment."    
+# while(1):
+#     inp=input(">>")
+#     print(response(inp,show_details=True))
+#     if inp=="stop":
+#         exit()
