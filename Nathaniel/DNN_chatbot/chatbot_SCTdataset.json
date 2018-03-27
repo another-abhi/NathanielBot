@@ -27,7 +27,7 @@
         },
 
         {"tag": "sports",
-         "patterns": ["What sports facilities do you have?", "What are your major sporting activites ?", "where do you play?", "what all can your students play" ],
+         "patterns": ["What sports facilities do you have?", "What are your major sporting activites ?", "where do you play?", "what all can your students play", "How many sports fields are there" ],
          "responses": ["We have a basketball court, a cricket net, a volleyball court and 2 badminton courts.", "We encourage students to play badminton, football, volleyball, cricket and basketball here."]
         },
 

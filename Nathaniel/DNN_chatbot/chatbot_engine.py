@@ -94,13 +94,13 @@ def response(sentence, userID='123', show_details=False):
                         s=(random.choice(i['responses']))
                         if (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                             context[userID] = ""
-                        #print (s)
+                        print (s)
                         return s
             results.pop(0)
         return "Sorry, I am unable to reply to that question at the moment."
 
 while(1):
-    inp=raw_input(">>")
-    print(response(inp,show_details=True))
+    inp=raw_input("type your message here>>")
+    print("type your message here>>",inp,"\n***********************************\nReply>>",response(inp,show_details=True))
     if inp=="stop":
         exit()
