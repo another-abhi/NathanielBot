@@ -4,7 +4,7 @@ sys.path.append('../')
 import chatbot_config as cfg
 # things we need for NLP
 import nltk
-#alternate stemmer should test 
+#alternate stemmer should test
 #from nltk.stem.lancaster import LancasterStemmer
 #stemmer = LancasterStemmer()
 from nltk.stem import SnowballStemmer
@@ -39,9 +39,22 @@ with open(cfg.dataset) as json_data:
             if intent['tag'] not in classes:
                 classes.append(intent['tag'])
     # stem and lower each word and remove duplicates
+    #print (words)
+    words = nltk.pos_tag(words)
+    #print (words)
+    tags = ['PRP','VBP', 'VBZ']
+    #print('**********************************************************')
+
+    words= [w for w in words if w[1] not in tags]
+    #print (words)
+    words= [w[0] for w in words]
+    #print('------------------------------------------------------------')
+    #print words
     words = [stemmer.stem(w.lower()) for w in words if w not in ignore_words]
+    #print("-------------------------------")
+    #print (words)
     words = sorted(list(set(words)))
-    # remove duplicates
+    #remove duplicates
     classes = sorted(list(set(classes)))
     print (len(documents), "documents",documents)
     print (len(classes), "classes", classes)
@@ -84,7 +97,7 @@ with open(cfg.dataset) as json_data:
     # Define model and setup tensorboard
     model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
     # Start training (apply gradient descent algorithm)
-    model.fit(train_x, train_y, n_epoch=cfg.epochs, batch_size=cfg.batch_size, show_metric=False)
+    model.fit(train_x, train_y, n_epoch=cfg.epochs, batch_size=cfg.batch_size, show_metric=True)
     model.save('model.tflearn')
 
     # save all of our data structures

@@ -18,7 +18,7 @@
 
         {"tag": "hours",
          "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
-         "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+         "responses": ["We're open every day 9am-5pm", "Our hours are 9am-5pm every day"]
         },
 
         {"tag": "departments",
@@ -26,9 +26,24 @@
          "responses": ["Our departments are  CS, EC, MECH and BT", "We teach CS, EC, MECH and BT"]
         },
 
+        {"tag": "sports",
+         "patterns": ["What sports facilities do you have?", "What are your major sporting activites ?", "where do you play?", "what all can your students play" ],
+         "responses": ["We have a basketball court, a cricket net, a volleyball court and 2 badminton courts.", "We encourage students to play badminton, football, volleyball, cricket and basketball here."]
+        },
+
+       {"tag": "facilities",
+        "patterns": ["What facilities do you have ?", "What facilites do the students avail?" , "What are your facilities?"],
+        "responses": ["We provide wifi, libarary , a central computing facility and many other features."]
+       },
+
+     {"tag": "contact",
+      "patterns": ["How can i contact the college ?", "How can i get in touch with the college?","How can i reach out to the college?"],
+      "responses": ["Call us at 9446567842 or send an email to sctcollege@sctce.in "]
+     },
+
         {"tag": "name",
         "patterns": ["Who are you?", "What is your name?", "What should i call you", "What do you go by?"],
-        "responses": ["Hello, my name is Nathaniel.", "I'm Nathaniel", "You can call me Nathaniel"]      
+        "responses": ["Hello, my name is Nathaniel.", "I'm Nathaniel", "You can call me Nathaniel"]
         },
 
 
@@ -37,8 +52,6 @@
         "responses": ["Where are you right now"],
         "context_set": "loc_canteen"
         },
-
-
         {"tag":"mg_canteen",
          "patterns":["I am at the main gate right now","main gate","Im standing near the cgpu"],
          "responses":["Take a left and walk past the cgpu to reach the workshop then walk along the left side of the workshop to reach your destination."],
@@ -59,9 +72,6 @@
         "responses":["You are in the building right now.The ccf is at the first floor and the canteen ath the ground floor"],
         "context_filter":"loc_canteen"
         }
-               
-
-
 
    ]
 

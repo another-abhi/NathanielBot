@@ -22,7 +22,7 @@ net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 # Define model and setup tensorboard
-model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')    
+model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
 model.load('../DNN_chatbot/model.tflearn')
 
 import nltk
@@ -41,16 +41,16 @@ def clean_up_sentence(sentence):
     sentence_words = [stemmer.stem(word.lower()) for word in sentence_words]
     return sentence_words
 
-# return bag of words array: 0 or 1 for each 
+# return bag of words array: 0 or 1 for each
 # word in the bag that exists in the sentence
 def bow(sentence, words, show_details=False):
     # tokenize the pattern
     sentence_words = clean_up_sentence(sentence)
     # bag of words
-    bag = [0]*len(words)  
+    bag = [0]*len(words)
     for s in sentence_words:
         for i,w in enumerate(words):
-            if w == s: 
+            if w == s:
                 bag[i] = 1
                 if show_details:
                     print ("found in bag: %s" % w)
@@ -94,12 +94,13 @@ def response(sentence, userID='123', show_details=False):
                         s=(random.choice(i['responses']))
                         if (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                             context[userID] = ""
-                        print (s)
+                        #print (s)
                         return s
             results.pop(0)
-        return "Sorry, I am unable to reply to that question at the moment."    
-# while(1):
-#     inp=input(">>")
-#     print(response(inp,show_details=True))
-#     if inp=="stop":
-#         exit()
+        return "Sorry, I am unable to reply to that question at the moment."
+
+while(1):
+    inp=raw_input(">>")
+    print(response(inp,show_details=True))
+    if inp=="stop":
+        exit()
