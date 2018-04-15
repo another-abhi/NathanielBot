@@ -50,12 +50,12 @@ def server():
 print ('#######################')
 print ('# Nathaniel SERVER #')
 print ('#######################')
-
 while True:
-	try:
-		server()
-	except KeyboardInterrupt:
-		print ('Stopping server...')
-        print("server:OFF")
-		break
+    try:
+        server()
+    except KeyboardInterrupt:
+        print ('Stopping server...')
+        print ('server:OFF')
+        break
+
 
