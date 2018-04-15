@@ -1,0 +1,145 @@
+\contentsline {paragraph}{}{1}
+\contentsline {chapter}{LIST OF ABBREVIATIONS}{iii}
+\contentsline {chapter}{LIST OF FIGURES}{iv}
+\contentsline {chapter}{LIST OF TABLES}{v}
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {section}{\numberline {1.1}Beacon Technology}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {section}{\numberline {1.2}Android Support for BLE}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {section}{\numberline {1.3}Problem Statement}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {section}{\numberline {1.4}Objective}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {section}{\numberline {1.5}Utilizing BLE in Indoor Positioning System}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{5}
+\contentsline {paragraph}{}{6}
+\contentsline {chapter}{\numberline {2}REQUIREMENT ANALYSIS}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {section}{\numberline {2.1}Android Operating System}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{}{8}
+\contentsline {subsection}{\numberline {2.1.1}Interface}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {subsection}{\numberline {2.1.2}Applications}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {subsection}{\numberline {2.1.3}Memory Management}{10}
+\contentsline {paragraph}{}{10}
+\contentsline {subsection}{\numberline {2.1.4}Virtual Reality}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {subsection}{\numberline {2.1.5}Hardware}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {paragraph}{}{12}
+\contentsline {subsection}{\numberline {2.1.6}Development}{12}
+\contentsline {paragraph}{}{12}
+\contentsline {paragraph}{}{12}
+\contentsline {subsection}{\numberline {2.1.7}Linux Kernal}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {subsection}{\numberline {2.1.8}Software Stack}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{15}
+\contentsline {paragraph}{}{16}
+\contentsline {section}{\numberline {2.2}Android Studio}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {subsection}{\numberline {2.2.1}Features}{16}
+\contentsline {paragraph}{}{16}
+\contentsline {subsection}{\numberline {2.2.2}System Requirements}{17}
+\contentsline {paragraph}{}{17}
+\contentsline {paragraph}{}{18}
+\contentsline {chapter}{\numberline {3}DESIGN}{19}
+\contentsline {section}{\numberline {3.1}Algorithm}{19}
+\contentsline {paragraph}{}{19}
+\contentsline {section}{\numberline {3.2}Block Diagram}{20}
+\contentsline {paragraph}{}{20}
+\contentsline {subsection}{\numberline {3.2.1}Search Destination Module}{20}
+\contentsline {paragraph}{}{20}
+\contentsline {subsection}{\numberline {3.2.2}Navigation Module}{20}
+\contentsline {paragraph}{}{20}
+\contentsline {subsection}{\numberline {3.2.3}Wrong Direction Module}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {subsection}{\numberline {3.2.4}Destination Reached Module}{21}
+\contentsline {paragraph}{}{21}
+\contentsline {chapter}{\numberline {4}IMPLEMENTATION AND RESULTS}{22}
+\contentsline {section}{\numberline {4.1}Using HM-10 BLE Modules as Low-Cost Beacons}{22}
+\contentsline {paragraph}{}{22}
+\contentsline {paragraph}{}{23}
+\contentsline {section}{\numberline {4.2}Firmware Update}{23}
+\contentsline {paragraph}{}{23}
+\contentsline {section}{\numberline {4.3}Beacon Configuration}{24}
+\contentsline {paragraph}{}{24}
+\contentsline {paragraph}{}{24}
+\contentsline {paragraph}{}{24}
+\contentsline {section}{\numberline {4.4}BLE Beacon}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {paragraph}{}{25}
+\contentsline {section}{\numberline {4.5}Design}{26}
+\contentsline {paragraph}{}{26}
+\contentsline {paragraph}{}{26}
+\contentsline {section}{\numberline {4.6}Uses}{26}
+\contentsline {paragraph}{}{26}
+\contentsline {paragraph}{}{27}
+\contentsline {paragraph}{}{27}
+\contentsline {paragraph}{}{27}
+\contentsline {paragraph}{}{28}
+\contentsline {paragraph}{}{28}
+\contentsline {paragraph}{}{28}
+\contentsline {section}{\numberline {4.7}Beacon Protocols}{28}
+\contentsline {subsection}{\numberline {4.7.1}iBeacon}{28}
+\contentsline {paragraph}{}{28}
+\contentsline {subsection}{\numberline {4.7.2}AltBeacon}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {subsection}{\numberline {4.7.3}URIBeacon}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {subsection}{\numberline {4.7.4}Eddystone}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {subsection}{\numberline {4.7.5}Comparable technologies}{29}
+\contentsline {paragraph}{}{29}
+\contentsline {section}{\numberline {4.8}Results}{30}
+\contentsline {paragraph}{}{30}
+\contentsline {paragraph}{}{30}
+\contentsline {chapter}{\numberline {5}CONCLUSION AND FUTURE WORK}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {section}{\numberline {5.1}The advantages of using beacons in retail environments}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {paragraph}{}{35}
+\contentsline {section}{\numberline {5.2}Potential drawbacks to implementing beacon technology}{36}
+\contentsline {paragraph}{}{36}
+\contentsline {section}{\numberline {5.3}The unanticipated advantages of using beacons in retail environments}{36}
+\contentsline {paragraph}{}{36}
+\contentsline {paragraph}{}{36}
+\contentsline {section}{\numberline {5.4}The Future of Evolving Beacon Technology}{36}
+\contentsline {paragraph}{}{36}
+\contentsline {paragraph}{}{37}
+\contentsline {paragraph}{}{37}
+\contentsline {chapter}{REFERENCES}{38}

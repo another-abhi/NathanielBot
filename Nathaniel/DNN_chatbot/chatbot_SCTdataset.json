@@ -58,7 +58,7 @@
          "context_filter":"loc_canteen"
         },
         {"tag":"mb_canteen",
-        "patterns":["I am at the main building now","basketball court", "seminar hall","class room"],
+        "patterns":["I am at the main building now","basketball court", "seminar hall","class room","library"],
         "responses":["Exit the main building.Climb the Cult A Way steps to your right. Take a right and walk past the left side of the workshop to reach your destination."],
         "context_filter":"loc_canteen"
         },
