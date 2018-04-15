@@ -16,13 +16,16 @@ def server():
     serverSocket.bind( (host,port) )
     try:
         serverSocket.listen(cfg.n_connection)
-        
+        flag=0
         clientConnection, clientAddress = serverSocket.accept()
         print("recieved connection from :", clientAddress)
         while True:
             msg=str(clientConnection.recv(1024).decode('ascii'))
             print ('Recieved Message : ',msg)
             if msg=="":
+                if flag==1:
+                    break
+                flag=1
                 continue
             if msg=="stop":
                 clientConnection.send('stop'.encode('ascii'))
