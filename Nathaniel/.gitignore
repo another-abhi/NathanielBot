@@ -7,4 +7,4 @@ checkpoint
 __pycache__
 .pytest_cache
 *.7z
-cab4employee/
+Nathaniel/DNN_chatbot/tflearn_logs
