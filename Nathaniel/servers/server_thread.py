@@ -44,6 +44,8 @@ def server():
     except socket.timeout:
         print("restarting server")
         print("server:OFF")
+        serverSocket.close()
+    except:
         serverSocket.close()    
     finally:
         #serverSocket.shutdown(socket.SHUT_RDWR)
