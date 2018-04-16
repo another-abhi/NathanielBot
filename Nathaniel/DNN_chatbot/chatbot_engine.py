@@ -58,7 +58,7 @@ def bow(sentence, words, show_details=False):
 
 #response generator
 context={}
-ERROR_THRESHOLD = 0.25
+ERROR_THRESHOLD = cfg.error
 def classify(sentence):
     # generate probabilities from the model
     results = model.predict([bow(sentence, words, True)])[0]

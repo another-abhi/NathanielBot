@@ -27,7 +27,7 @@
         },
 
         {"tag": "sports",
-         "patterns": ["What sports facilities do you have?", "What are your major sporting activites ?", "where do you play?", "what all can your students play", "How many sports fields are there" ],
+         "patterns": ["What sports facilities do you have?", "What are your major sporting activites ?", "where do you play?", "what all can your students play", "How many sports fields are there","sport" ],
          "responses": ["We have a basketball court, a cricket net, a volleyball court and 2 badminton courts.", "We encourage students to play badminton, football, volleyball, cricket and basketball here."]
         },
 
@@ -37,8 +37,8 @@
        },
 
      {"tag": "contact",
-      "patterns": ["How can i contact the college ?", "How can i get in touch with the college?","How can i reach out to the college?"],
-      "responses": ["Call us at 9446567842 or send an email to sctcollege@sctce.in "]
+      "patterns": ["How can i contact the college ?", "How can i get in touch with the college?","How can i reach out to the college?","how can i contact you"],
+      "responses": ["Call us at 9446567842 or send an email to sctcollege@sctce.in"]
      },
 
         {"tag": "name",
@@ -68,10 +68,58 @@
         "context_filter":"loc_canteen"
         },
         {"tag":"ccf_canteen",
-        "patterns":["ccf","canteen"],
+        "patterns":["ccf","canteen","near the ccf"],
         "responses":["You are in the building right now.The ccf is at the first floor and the canteen ath the ground floor"],
         "context_filter":"loc_canteen"
-        }
+        },
+
+        {"tag": "location_canteen",
+          "patterns": ["How can i get to the canteen", "How do i reach canteen", "Where is the canteen","Where is the ccf","How to get to the ccf"],
+          "responses": ["Where are you right now"],
+          "context_set": "loc_canteen"
+          },
+          {"tag":"mg_canteen",
+           "patterns":["I am at the main gate right now","main gate","Im standing near the cgpu"],
+           "responses":["Take a left and walk past the cgpu to reach the workshop then walk along the left side of the workshop to reach your destination."],
+           "context_filter":"loc_canteen"
+          },
+          {"tag":"mb_canteen",
+          "patterns":["I am at the main building now","basketball court", "seminar hall","class room","library"],
+          "responses":["Exit the main building.Climb the Cult A Way steps to your right. Take a right and walk past the left side of the workshop to reach your destination."],
+          "context_filter":"loc_canteen"
+          },
+          {"tag":"ws_canteen",
+          "patterns":["I am at the workshop right now","ec lab","embedded systems lab","cadd lab"],
+          "responses":["Walk past the left side of the workshop building to reach your destination."],
+          "context_filter":"loc_canteen"
+          },
+          {"tag":"ccf_canteen",
+          "patterns":["ccf","canteen"],
+          "responses":["You are in the building right now.The ccf is at the first floor and the canteen ath the ground floor"],
+          "context_filter":"loc_canteen"
+          },
+
+
+        {"tag": "location_mg",
+          "patterns": ["How can i get to the main gate", "How can i reach main gate", "Where is the main gate","Where is the cgpu","How can i get to the cgpu","career guidance","placement unit"],
+          "responses": ["Where are you right now"],
+          "context_set": "loc_mg"
+          },
+          {"tag":"canteen_mg",
+          "patterns":["I am at the canteen right now","canteen","Im standing near the ccf"],
+          "responses":["Go straight after exiting the building and take a left past the workshop to reach your destination."],
+          "context_filter":"loc_mg"
+          },
+          {"tag":"mb_mg",
+          "patterns":["I am at the main building now","basketball court", "seminar hall","class room","library"],
+          "responses":["Exit the main building. Walk straight forward from the entrance to reach your destination"],
+          "context_filter":"loc_mg"
+          },
+          {"tag":"ws_mg",
+          "patterns":["I am at the workshop right now","ec lab","embedded systems lab","cadd lab"],
+          "responses":["Walk past the workshop building and take a left to reach your destination."],
+          "context_filter":"loc_mg"
+          }
 
    ]
 
