@@ -1,5 +1,5 @@
 
-dataset="chatbot_Classifierbotdataset.json"
+dataset="chatbot_SCTdataset.json"
 epochs=1000
 batch_size=500
 port=1234
