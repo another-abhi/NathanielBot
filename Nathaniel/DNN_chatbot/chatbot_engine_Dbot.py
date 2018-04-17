@@ -1,10 +1,10 @@
 #--------------------------NATHANIEL ENGINE--------------------------------
 import sys
 sys.path.append('../')
-import chatbot_config as cfg
+import chatbot_config_Dbot as cfg
 import pickle
 # unpacking the training data
-data = pickle.load( open( "../DNN_chatbot/training_data", "rb" ) )
+data = pickle.load( open( "../DNN_chatbot/training_data_dbot", "rb" ) )
 words = data['words']
 classes = data['classes']
 train_x = data['train_x']
@@ -23,7 +23,7 @@ net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 # Define model and setup tensorboard
 model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
-model.load('../DNN_chatbot/model.tflearn')
+model.load('../DNN_chatbot/Dbot_model.tflearn')
 
 import nltk
 #from nltk.stem.lancaster import LancasterStemmer
@@ -78,6 +78,7 @@ def classify(sentence):
 def response(sentence, userID='123', show_details=False):
     results = classify(sentence)
     # if we have a classification then find the matching intent tag
+    s="You might be having "
     if results:
         # loop as long as there are matches to process
         while results:
@@ -91,13 +92,17 @@ def response(sentence, userID='123', show_details=False):
                     if not 'context_filter' in i or (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                         if show_details: print ('tag:', i['tag'])
                         # a random response from the intent
-                        s=(random.choice(i['responses']))
+                        s=s+(random.choice(i['responses']))+" or "
                         if (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
                             context[userID] = ""
                         print (s)
-                        return s
+                        
             results.pop(0)
-    return "Sorry, I am unable to reply to that question at the moment."
+    if(s!="You might be having "):
+        s = s[:-3]
+        return s
+    else:            
+        return "Sorry, I am unable to diagnose your symptoms at the moment"
 
 while(1):
      #inp=raw_input("type your message here>>")

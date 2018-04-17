@@ -1,0 +1,36 @@
+{"intents": [
+
+    {"tag": "Knowledge",
+     "patterns": ["Recall", "Tell", "List", "State", "Name", "recognize", "relate", "label", "memorize", "define"],
+     "responses": ["Knowledge"],
+     "context_set": ""
+    },
+
+    {"tag": "Comprehension",
+     "patterns": ["Arrange", "Explain", "Classify", "Translate", "Demonstrate", "indicate", "locate", "recognize", "describe",  "discuss", "express"],
+     "responses": ["Comprehension"]
+    },
+
+    {"tag": "Application",
+     "patterns": ["Modify",        "Apply",        "Operate",        "Prepare",        "Illustrate",        "Demonstrate",        "sketch",        "practice",        "schedule",        "predict",        "interpret",        "employ",        "solve",        "use",        "write",        "Experiment",        "Identify",        "Interview",        "Make",        "Model",        "Organize",        "organise",        "Plan",        "Utilize"],
+     "responses": ["Applicaiton"]
+    },
+
+    {"tag": "Analysis",
+     "patterns": ["analyze",        "appraise","distction",        "calculate",        "categorize",        "differentiate",        "distinguish",        "examine",        "assume",        "conclusion",        "discover",        "dissect",        "divide",        "function",        "inference",        "inspect",        "motive",        "relationships",        "simplify",        "survey",        "test",        "theme",        "Analyze",        "Appraise" ],
+     "responses": ["Analysis"]
+    },
+
+    {"tag": "Evaluate",
+     "patterns": ["judge",        "predict",        "assess",        "attach",        "defend",        "estimate",        "rate",        "justify",        "agree",        "award",        "conclude",        "criteria",        "critize",        "decide",        "deduct",        "determine",        "disprove",        "importance",        "influence",        "mark",        "measure",        "opinion",        "perceive",        "prioritize",        "prove",        "recommend",        "support",        "value" ],
+     "responses": ["Evaluate"]
+    },
+
+    {"tag": "Synthesis",
+     "patterns": ["assemble", "create", "collect", "compose", "design", "setup", "propose", "adopt", "change", "compile", "delete", "design", "discuss", "elaborate", "formulate", "happen", "imagine", "improve", "invent",  "maximize", "minimize", "originate", "test" ],
+     "responses": ["Synthesis"]
+    } 
+
+]
+
+}

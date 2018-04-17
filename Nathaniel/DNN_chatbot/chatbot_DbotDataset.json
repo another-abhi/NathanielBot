@@ -2,39 +2,39 @@
 
         {"tag": "psoriasis",
          "patterns": ["red patches of skin small scaling spots dry cracked skin itching stiff joints pitted or ridged nails"],
-         "responses": ["psoriasis"],
+         "responses": ["Psoriasis"],
          "context_set": ""
         },
 
         {"tag": "pneumonia",
          "patterns": ["high fever headache severe aches and pains extreme tiredness dry hacking cough"],
-         "responses": ["pneumonia"]
+         "responses": ["Pneumonia"]
         },
 
         {"tag": "chickenpox",
          "patterns": ["rashes spots blisters painful red breathing difficulty nausea loss of appetite aching muscles fever malaise"],
-         "responses": ["Chicken Pox"]
+         "responses": ["Chickenpox"]
         },
 
         {"tag": "smallpox",
          "patterns": ["high fever chills headache severe back pain abdominal pain vomiting" ],
-         "responses": ["smallpox"]
+         "responses": ["Smallpox"]
       },
       {"tag": "asthma",
       "patterns": ["coughin at night wheezing shortness of breath chest tightness pain or pressure" ],
-      "responses": ["asthma"]
+      "responses": ["Asthma"]
       },
       {"tag": "cholera",
        "patterns": ["diarrhea vomiting dehydration rapid heart rate dry mucous low blood pressure thirst muscle cramp " ],
-       "responses": ["cholera"]
+       "responses": ["Cholera"]
     },
     {"tag": "typhoid",
     "patterns": ["poor appetite headaches genralized aches and pains fever as high as 104 degrees lethargy diarrhea chest congestion abdominal pain" ],
-    "responses": ["typhoid"]
+    "responses": ["Typhoid"]
    },
    {"tag": "malaria",
     "patterns": ["vomiting headache diarrhea fatigue tired body aches yellow skin jaundice kidney failure seizure confusion coma anemia" ],
-    "responses": ["malaria"]
+    "responses": ["Malaria"]
    }
       ]
 

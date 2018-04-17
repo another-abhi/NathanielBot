@@ -1,10 +1,10 @@
 #--------------------------NATHANIEL ENGINE--------------------------------
 import sys
 sys.path.append('../')
-import chatbot_config as cfg
+import chatbot_config_Question as cfg
 import pickle
 # unpacking the training data
-data = pickle.load( open( "../DNN_chatbot/training_data", "rb" ) )
+data = pickle.load( open( "../DNN_chatbot/training_data_question", "rb" ) )
 words = data['words']
 classes = data['classes']
 train_x = data['train_x']
@@ -23,7 +23,7 @@ net = tflearn.fully_connected(net, len(train_y[0]), activation='softmax')
 net = tflearn.regression(net)
 # Define model and setup tensorboard
 model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
-model.load('../DNN_chatbot/model.tflearn')
+model.load('../DNN_chatbot/Question_model.tflearn')
 
 import nltk
 #from nltk.stem.lancaster import LancasterStemmer
@@ -97,7 +97,7 @@ def response(sentence, userID='123', show_details=False):
                         print (s)
                         return s
             results.pop(0)
-    return "Sorry, I am unable to reply to that question at the moment."
+    return "Sorry, I was unable to identify the class of that question"
 
 while(1):
      #inp=raw_input("type your message here>>")
