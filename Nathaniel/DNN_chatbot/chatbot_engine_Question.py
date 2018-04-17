@@ -99,9 +99,9 @@ def response(sentence, userID='123', show_details=False):
             results.pop(0)
     return "Sorry, I was unable to identify the class of that question"
 
-while(1):
-     #inp=raw_input("type your message here>>")
-     inp=input("type your message here>>")
-     print("type your message here>>",inp,"\n***********************************\nReply>>",response(inp,show_details=True))
-     if inp=="stop":
-         exit()
+# while(1):
+#      #inp=raw_input("type your message here>>")
+#      inp=input("type your message here>>")
+#      print("type your message here>>",inp,"\n***********************************\nReply>>",response(inp,show_details=True))
+#      if inp=="stop":
+#          exit()

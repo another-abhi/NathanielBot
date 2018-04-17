@@ -104,9 +104,9 @@ def response(sentence, userID='123', show_details=False):
     else:            
         return "Sorry, I am unable to diagnose your symptoms at the moment"
 
-while(1):
-     #inp=raw_input("type your message here>>")
-     inp=input("type your message here>>")
-     print("type your message here>>",inp,"\n***********************************\nReply>>",response(inp,show_details=True))
-     if inp=="stop":
-         exit()
+# while(1):
+#      #inp=raw_input("type your message here>>")
+#      inp=input("type your message here>>")
+#      print("type your message here>>",inp,"\n***********************************\nReply>>",response(inp,show_details=True))
+#      if inp=="stop":
+#          exit()
